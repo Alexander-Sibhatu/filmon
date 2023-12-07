@@ -6,9 +6,9 @@ import '../App.css'
 
 const MovingText = () => {
     const config = {
-        words: ['Manager Partner & COO', 'Trade office consultant', 'Senior planning officer'],
+        words: ['Manager Partner & COO', 'Trade Office Consultant', 'Senior Planning Officer'],
         loop: true,
-        typeSpeed: 150,
+        typeSpeed: 130,
         deleteSpeed: 50,
         delaySpeed: 1700,
       };
