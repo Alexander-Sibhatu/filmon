@@ -11,7 +11,7 @@ type Props = {}
 
 const About = (props: Props) => {
 
-  const downloadLink = './public/documents/Adam CV.pdf';
+  const downloadLink = process.env.PUBLIC_URL + '/documents/AdamCV.pdf';;
 
   return (
     <div className='firstPage'>
@@ -39,7 +39,7 @@ const About = (props: Props) => {
 
       <div className='icons'>
         <div className='left'>
-          <a href={downloadLink} download="your cv.pdf" className='download'> <FontAwesomeIcon icon={faDownload} /></a>
+          <a href={downloadLink} download="your cv.pdf" className='download' target='_blank' rel="noopener noreferrer"> <FontAwesomeIcon icon={faDownload} /></a>
         </div>
 
         <div className='right'>
