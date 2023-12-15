@@ -5,7 +5,7 @@
     justify-content: space-between;
     width: 100vw;
     height: 100dvh;
-    background: linear-gradient(to bottom, #2a3f49, #161a1d );
+    background: linear-gradient(to bottom, #1b263b, #161a1d );
   } 
   
   @keyframes fadeIn {
