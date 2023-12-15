@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .btn {
-    @apply font-sans font-medium tracking-wider hover:bg-slate-400 cursor-pointer
+    @apply font-medium tracking-wider hover:bg-slate-400 cursor-pointer
 }
