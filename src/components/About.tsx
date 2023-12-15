@@ -2,16 +2,26 @@ import React from 'react'
 import Filmon from '../images/Filmonn.jpeg'
 import MovingText from './MovingText'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons';
+import { gsap } from 'gsap';
+import { useEffect } from 'react';
 
-
+gsap.to('.fullstop', {duration: 2, x: 46, ease: 'bounce'})
 
 type Props = {}
 
+
 const About = (props: Props) => {
 
-  const downloadLink = process.env.PUBLIC_URL + '/documents/AdamCV.pdf';;
+  useEffect(() => {
+    const drop = () => gsap.from('.fullstop', {duration:2, 
+      y: '-50', ease: 'bounce'})
+      drop();
+  }, [])
+
+  const downloadLink = process.env.PUBLIC_URL + '/documents/AdamCV.pdf';
+  const emaillink = 'mailto:filmon.g@efoyplus.com';
 
   return (
     <div className='firstPage'>
@@ -39,11 +49,12 @@ const About = (props: Props) => {
 
       <div className='icons'>
         <div className='left'>
-          <a href={downloadLink} download="your cv.pdf" className='download' target='_blank' rel="noopener noreferrer"> <FontAwesomeIcon icon={faDownload} /></a>
+          <a href={emaillink} className='email-link' target='_blank' rel="noopener noreferrer"> <FontAwesomeIcon icon={faEnvelope} /></a>
         </div>
 
         <div className='right'>
-          <a href='https://github.com/Alexander-Sibhatu/' target='_blank' rel="noopener noreferrer" className='linkedIn'><FontAwesomeIcon icon={faLinkedin} /></a>
+        <a href={downloadLink} className='animate-bounce download' target='_blank' rel="noopener noreferrer"> <FontAwesomeIcon icon={faDownload} /></a>
+          <a href='https://www.linkedin.com/in/filmon-g-yohannes' target='_blank' rel="noopener noreferrer" className='linkedIn'><FontAwesomeIcon icon={faLinkedin} /></a>
           <a href='https://www.linkedin.com/in/filmon-g-yohannes/' target='_blank' rel="noopener noreferrer" className='twitter'><FontAwesomeIcon icon={faTwitter} /></a>
         </div> 
       </div>
