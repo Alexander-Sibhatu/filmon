@@ -4,9 +4,8 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background: linear-gradient(to bottom, #2a3f49, #161a1d );
-    animation: fadeIn 2s ease-in-out;
   } 
   
   @keyframes fadeIn {
@@ -105,11 +104,45 @@
     display: flex;
     gap: 2rem;
   }
+ 
+  @keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
   .twitter,
   .linkedIn,
+  .email-link,
   .download {
     font-size: 2rem;
     color: #38a3a5;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  
+    &.jump {
+      animation: jump 0.5s 1; /* Add a jump animation on the first render */
+    }
+  
+    &:hover {
+      color: #007bff;
+      transform: scale(1.1);
+    }
+  }
+  
+  .download {
+    
+    transition: color 0.3s ease;
+    &:hover {
+      color: #007bff; /* Change to the color you want on hover */
+    }
   }
   
 
@@ -144,13 +177,14 @@
     }
   }
 
-  @media (max-width: 395px) {
+  @media (max-width: 390px) {
     .first-page {
-      padding-top: 2rem;
-      margin-top: 2rem;
+      padding-top: 0;
+      margin-top:0;
     }
     .icons {
       margin-right: 2rem;
       margin-left: 2rem;
+      margin-bottom: 0;
     }
   }
