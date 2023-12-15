@@ -29,7 +29,7 @@ const About = (props: Props) => {
       <div className='firstPage__review'>
         <div className='first-page'>
           <p className='greeting'>Greetings, I go by</p>
-          <p className='name'>Filmon Sibhatu <span className='fullstop'></span></p>
+          <p className='name'>Filmon Sibhatu<span className='fullstop'></span></p>
           <p className='im'>As a</p>
           <h2><MovingText /></h2>
           <p className='detail1'>
