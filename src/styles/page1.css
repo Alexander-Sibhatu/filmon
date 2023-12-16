@@ -117,32 +117,22 @@
     }
   }
   
-  .twitter,
-  .linkedIn,
-  .email-link,
+  .reachout,
   .download {
     font-size: 2rem;
     color: #38a3a5;
     margin-right: 10px;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
-  
-    &.jump {
-      animation: jump 0.5s 1; /* Add a jump animation on the first render */
-    }
-  
-    &:hover {
-      color: #007bff;
-      transform: scale(1.1);
-    }
   }
   
-  .download {
-    
-    transition: color 0.3s ease;
-    &:hover {
-      color: #007bff; /* Change to the color you want on hover */
-    }
+  .download:hover {
+    color: #007bff !important;
+    transform: scale(1.1) !important;
+  }
+  .reachout:hover {
+    color: #007bff;
+    transform: scale(1.1);
   }
   
 
