@@ -139,7 +139,7 @@
   @media (max-width: 768px) {
     .first-page {
       flex: 2;
-      font-family: sans-serif;
+      /* font-family: sans-serif; */
       display: flex;
       flex-direction: column;
       width: 60vw;
@@ -167,14 +167,22 @@
     }
   }
 
-  @media (max-width: 390px) {
+  @media (max-width: 380px) {
     .first-page {
       padding-top: 0;
       margin-top:0;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     .icons {
       margin-right: 2rem;
       margin-left: 2rem;
       margin-bottom: 0;
+    }
+    .im {
+      width: 100vw;
+    }
+    .typed {
+      width: 100vw;
     }
   }
