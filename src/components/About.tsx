@@ -7,7 +7,6 @@ import { faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons';
 import { gsap } from 'gsap';
 import { useEffect } from 'react';
 
-gsap.to('.fullstop', {duration: 2, x: 46, ease: 'bounce'})
 
 type Props = {}
 
@@ -18,6 +17,25 @@ const About = (props: Props) => {
     const drop = () => gsap.from('.fullstop', {duration:2, 
       y: '-50', ease: 'bounce'})
       drop();
+      const rotateAndZoom = () => {
+        const tl = gsap.timeline();
+  
+        // Start smaller and rotate quickly a few times
+        tl.to('.download', { scale: 0.5, rotation: 1080, duration: 0.5, ease: 'power2.inOut' });
+  
+        // Slow down and rotate gradually
+        tl.to('.download', { rotation: 1800, duration: 1, ease: 'power2.inOut' });
+  
+        // Zoom out
+        tl.to('.download', { scale: 1.5, duration: 0.5, ease: 'power2.inOut' });
+
+         // Reset scale to 1
+        tl.to('.download', { scale: 1, duration: 0 });
+      };
+  
+      rotateAndZoom();
+    // const rotate = () => gsap.to('.download', { rotation: 360, duration: 1, ease: 'power2.inOut' });
+    //   rotate();
   }, [])
 
   const downloadLink = process.env.PUBLIC_URL + '/documents/AdamCV.pdf';
@@ -49,13 +67,13 @@ const About = (props: Props) => {
 
       <div className='icons'>
         <div className='left'>
-          <a href={emaillink} className='email-link' target='_blank' rel="noopener noreferrer"> <FontAwesomeIcon icon={faEnvelope} /></a>
+          <a href={emaillink} className='reachout' target='_blank' rel="noopener noreferrer"> <FontAwesomeIcon icon={faEnvelope} /></a>
         </div>
 
         <div className='right'>
-        <a href={downloadLink} className='animate-bounce download' target='_blank' rel="noopener noreferrer"> <FontAwesomeIcon icon={faDownload} /></a>
-          <a href='https://www.linkedin.com/in/filmon-g-yohannes' target='_blank' rel="noopener noreferrer" className='linkedIn'><FontAwesomeIcon icon={faLinkedin} /></a>
-          <a href='https://www.linkedin.com/in/filmon-g-yohannes/' target='_blank' rel="noopener noreferrer" className='twitter'><FontAwesomeIcon icon={faTwitter} /></a>
+        <a href={downloadLink} className='download' target='_blank' rel="noopener noreferrer"> <FontAwesomeIcon icon={faDownload} /></a>
+          <a href='https://www.linkedin.com/in/filmon-g-yohannes' target='_blank' rel="noopener noreferrer" className='reachout'><FontAwesomeIcon icon={faLinkedin} /></a>
+          <a href='https://www.linkedin.com/in/filmon-g-yohannes/' target='_blank' rel="noopener noreferrer" className='reachout'><FontAwesomeIcon icon={faTwitter} /></a>
         </div> 
       </div>
 
