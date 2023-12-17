@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .firstPage {
     box-sizing: border-box;
     display: flex;
@@ -179,9 +184,6 @@
       margin-right: 2rem;
       margin-left: 2rem;
       margin-bottom: 0;
-    }
-    .im {
-      width: 100vw;
     }
     .typed {
       width: 100vw;
