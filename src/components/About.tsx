@@ -56,7 +56,7 @@ const About = (props: Props) => {
           </p>
           <p className='detail2'>
             Transparent in displaying the varied range of outcomes expected under different scenarios and diligent to test 
-            the sensitivity of suggested assumptions or scenarios. 
+            the sensitivity.
           </p>
         </div>
 
