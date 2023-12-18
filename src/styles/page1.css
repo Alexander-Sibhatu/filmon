@@ -176,7 +176,8 @@ body {
       margin-right: 2rem;
       margin-left: 2rem;
     }
-    p {
+    .detail1,
+    .detail2 {
       font-size: 14px;
     }
   }
@@ -205,7 +206,7 @@ body {
     .detail2 {
       font-size: 14px;
     }
-    .moving__text {
-      font-size: 1rem;
+    p > .moving__text {
+      font-size: 5rem;
     }
   }
