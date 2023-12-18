@@ -76,7 +76,7 @@ const Experience = (props: Props) => {
     <div className='experience'>
       <div className='text-center text-4xl font-bold m-5 mb-8'>Experience</div>
 
-      <div className='flex flex-col w-5/6 md:gap-6 md:flex-row md:w-3/6 mx-auto md:justify-center mb-4'>
+      <div className='flex flex-col w-5/6 h-auto md:gap-6 md:flex-row md:w-3/6 mx-auto md:justify-center mb-4'>
         <div className='flex flex-row p-2 h-2/5 bg-white md:flex-col md:justify-center'>
           {Object.keys(companyDetails).map((company) => (
             <button
