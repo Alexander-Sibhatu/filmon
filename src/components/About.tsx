@@ -49,7 +49,7 @@ const About = (props: Props) => {
           <p className='greeting'>Greetings, I go by</p>
           <p className='name'>Filmon Sibhatu<span className='fullstop'></span></p>
           <p className='im'>As a</p>
-          <h2><MovingText /></h2>
+          <p className='moving__text'><MovingText /></p>
           <p className='detail1'>
             Effective at improving performance via identification of key business drivers, growth opportunities, 
             and scheming strategies of intervention. 
