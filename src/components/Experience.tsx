@@ -76,11 +76,11 @@ const Experience = (props: Props) => {
     <div className='experience'>
       <div className='text-center text-4xl font-bold m-5 mb-8'>Experience</div>
 
-      <div className='flex flex-col md:gap-6 md:flex-row md:w-3/6 mx-auto md:justify-center mb-4'>
+      <div className='flex flex-col w-5/6 md:gap-6 md:flex-row md:w-3/6 mx-auto md:justify-center mb-4'>
         <div className='flex flex-row p-2 h-2/5 bg-white md:flex-col md:justify-center'>
           {Object.keys(companyDetails).map((company) => (
             <button
-              className={` btn flex p-1 rounded-md md:flex flex-1 md:text-left md:p-4 h-16 bg-[#ffffff] ${selectedCompany === company? 'text-[#233d4d] rounded-md font-bold bg-slate-200' : ''}`}
+              className={`btn mb-3 flex p-1 rounded-md md:flex flex-1 md:text-left md:p-4 h-16 bg-[#ffffff] ${selectedCompany === company? 'text-[#233d4d] rounded-md font-bold bg-slate-200' : ''}`}
               key={company}
               onClick={() => handleButtonClick(company)}
             >
@@ -89,7 +89,7 @@ const Experience = (props: Props) => {
           ))} 
         </div>
         <div
-          className={`company__page w-full min-h-screen bg-[#ffffff] text-center shadow-[5px_0_5px_#b5bdc1] ${selectedCompany ? 'text-[#335c67]' : 'text-black'} p-5`}
+          className={`company__page w-full min-h-screen bg-[#ffffff] text-center shadow-[5px_-5px_5px_#b5bdc1] ${selectedCompany ? 'text-[#335c67]' : 'text-black'} p-5`}
         >
           {selectedCompany && (
             <div>
