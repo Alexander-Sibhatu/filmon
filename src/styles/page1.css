@@ -176,6 +176,9 @@ body {
       margin-right: 2rem;
       margin-left: 2rem;
     }
+    p {
+      font-size: 14px;
+    }
   }
 
   @media (max-width: 395px) {
@@ -197,5 +200,8 @@ body {
     .typed {
       width: 80vw;
       margin-left: 0;
+    }
+    p {
+      font-size: 14px;
     }
   }
