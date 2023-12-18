@@ -77,10 +77,10 @@ const Experience = (props: Props) => {
       <div className='text-center text-4xl font-bold m-5 mb-8'>Experience</div>
 
       <div className='flex flex-col w-5/6 h-auto md:gap-6 md:flex-row md:w-3/6 mx-auto md:justify-center mb-4'>
-        <div className='flex flex-row p-2 h-2/5 bg-white md:flex-col md:justify-center'>
+        <div className='flex flex-row mb-5 p-2 h-2/5 bg-white md:flex-col md:justify-center'>
           {Object.keys(companyDetails).map((company) => (
             <button
-              className={`btn mb-3 flex p-1 rounded-md md:flex flex-1 md:text-left md:p-4 h-16 bg-[#ffffff] ${selectedCompany === company? 'text-[#233d4d] rounded-md font-bold bg-slate-200' : ''}`}
+              className={`btn flex p-1 rounded-md md:flex flex-1 md:text-left md:p-4 h-16 bg-[#ffffff] ${selectedCompany === company? 'text-[#233d4d] rounded-md font-bold bg-slate-200' : ''}`}
               key={company}
               onClick={() => handleButtonClick(company)}
             >
